@@ -30,4 +30,4 @@ jobs:
         run: sleep 15
 
       - name: Run Unit Tests
-        run: npm test
+        run: npm run test
