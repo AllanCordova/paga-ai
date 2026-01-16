@@ -14,6 +14,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Create .env file
+        run: |
+          touch .env.test
+          echo "SUPABASE_SERVICE_ROLE_KEY=${{ secrets.SERVICE_ROLE_KEY_TEST }}" >> .env.test
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
