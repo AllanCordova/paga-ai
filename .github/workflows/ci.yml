@@ -16,8 +16,8 @@ jobs:
 
       - name: Create .env file
         run: |
-          touch .env.test
-          echo "SUPABASE_SERVICE_ROLE_KEY=${{ secrets.SERVICE_ROLE_KEY_TEST }}" >> .env.test
+          touch .env
+          echo "SUPABASE_SERVICE_ROLE_KEY=${{ secrets.SERVICE_ROLE_KEY_TEST }}" >> .env
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
